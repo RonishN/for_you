@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+       
+        #yeshover {
+            display: none;
+            position: absolute;
+            background-color: #454343;
+            color: #ffffff;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            margin-top: -30px;
+            margin-left: 10px; 
+        }
+
+       
+        .btn {
+            position: relative; 
+        }
+    </style>
+</head> 
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">Malai aauta kura sodnu thayo k</h1>
+            <h1 class="header_text">talai mero kaila yad aaudaina ho?</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeG00anVpZnp3ZTZ4a2Q1djhhNDd2Yjg4cmZ5NzRuOWRpNjNiNm5leCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26FPsOhR3tyQRTc2Y/giphy.gif" alt="Cute animated illustration">
+        </div>
+        <div class="buttons">
+            
+            <button class="btn" id="yesButton" onclick="nextPage()" onmouseover="showHoverText()" onmouseout="hideHoverText()">haina</button>
+           
+            <button class="btn" id="noButton" onclick="moveButton()">ho </button>
+        </div>
+      
+        <span id="yeshover"> Then message me fucker, bitch, shit,marn man xa khateni talai,</span>
+    </div>
+
+    <script>
+        function nextPage() {
+            window.location.href = "https://www.instagram.com/ronish27.gmail.com.np/";
+        }
+
+        function showHoverText() {
+            document.getElementById('yeshover').style.display = 'block';
+        }
+
+        function hideHoverText() {
+            document.getElementById('yeshover').style.display = 'none';
+        }
+
+        function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`;
+        }
+    </script> 
+</body> 
+</html>
